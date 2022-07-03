@@ -6,7 +6,7 @@ Also no website design programs, no imports and no divs or span (only if really 
 I had no prior experience with webdesign, so this is my first (semi) serious website, please take the janky code with a grain of salt
 
 The website will never sell anything on it, the webshop is one of the requirements for the subject
-
+Website is hosted via firebase
 
 
 
