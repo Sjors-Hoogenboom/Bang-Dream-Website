@@ -1,9 +1,5 @@
 @import "master.css";
 
-.body_main{
-  font-family: "Source Sans Pro", sans-serif;
-}
-
 
 .section_introduction{
   display: block;
@@ -21,7 +17,6 @@
   max-width: 90%;
   margin: auto;
   padding-top: 4%;
-  font-family: Corbel;
   color: #3d2e4f;
 }
 
@@ -89,46 +84,76 @@ iframe{
 }
 
 
-.content_game{
+.section_game{
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80vw;
-  margin: auto;
+  margin: 0;
+
   margin-top: 5%;
+  background-color: rgb(240, 195, 255);
+  border: solid 1px;
+  border-color: black;
+  border-radius: 2%;
+}
+
+.dotted_pattern{
+  height: inherit;
+  object-fit: cover;
+  display: flex;
+  align-items: flex-start;
+  position: static;
+  width: 50%;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.roselia_logo{
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: flex-end;
+  margin-left: auto;
+  float: right;
+  height: inherit;
+  user-select: none;
 }
 
 .h1_content{
-  background: url("../img/assets/header_asset.png") 0 30% no-repeat;
-  height: 40px;
-  background-color: #4648ab;
-  color: white;
-  position: relative;
-  text-align: center;
-  padding-top: 3%;
-  text-indent: -20%;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.h1_content::after{
-  content: "";
-  background: url("../img/assets/roselia_logo.png");
-  background-position: right;
-  background-repeat: no-repeat;
-  right: -10px;
-  position: absolute;
-  background-size: cover;
-  width: 20%;
-  height: 70%;
-}
-
-.text_bottom{
-  width: 30vw;
-  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
-  padding-top: 15%;
+  font-weight: bold;
+}
+
+.test{
+  display: flex;
+  justify-content: flex-start;
+  background-size: cover;
+  height: 50px;
+  width: 32vw;
+  align-items: flex-end;
+  object-fit: contain;
+  background-color: #A020F0;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.test > p {
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: inherit;
+  height: inherit;
+}
+
+.content_game{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  padding-top: 50px;
   box-sizing: border-box;
-  margin-bottom: 65%;
   font-size: 19px;
 }
 
@@ -165,12 +190,12 @@ iframe{
     width: 90vw;
   }
 
-  .content_game{
+  .section_game{
     width: 100%;
     margin-left: 0%;
     grid-template-columns: 1fr;
   }
-  .text_bottom{
+  .content_game{
     width: 95%;
     margin-top: 10%;
     font-size: 80%;
@@ -188,12 +213,12 @@ iframe{
     width: 90vw;
   }
 
-  .content_game{
+  .section_game{
     width: 100%;
     margin-left: 0%;
     grid-template-columns: 1fr;
   }
-  .text_bottom{
+  .content_game{
     width: 90%;
     margin-top: 20%;
   }
@@ -209,12 +234,12 @@ iframe{
     width: 80vw;
   }
 
-  .content_game{
+  .section_game{
     width: 100%;
     margin-left: 0%;
     grid-template-columns: 1fr;
   }
-  .text_bottom{
+  .content_game{
     width: 80%;
     margin-top: 8%;
   }
