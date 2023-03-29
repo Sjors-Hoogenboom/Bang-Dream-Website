@@ -1,0 +1,215 @@
+@import "master.css";
+
+.body_characters{
+  font-size: 16px;
+}
+
+.searchwrapper{
+  text-align: center;
+}
+
+.searchbar{
+  padding: 20px;
+  margin-top: 40px;
+  width: 40vw;
+  font-size: 140%;
+  border-width: 2px;
+}
+
+.searchbar:focus{
+  outline: 7px solid #ADD8E6;
+}
+
+.header_characters {
+  display: block;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 43vw;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #FF73B7;
+}
+
+.header_characters > h1{
+  font-size: 200%;
+  color: blue;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.reverse-card {
+  background-color: transparent;
+  width: 100%;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.reverse-card:hover .reverse-card-inner {
+  transform: rotateY(180deg);
+}
+
+.grid_characters{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80vw;
+    grid-row-gap: 40px;
+    grid-column-gap: 10%;
+    padding: 40px;
+    margin-left: 4vw;
+    justify-content: center;
+}
+
+.reverse-card-inner {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.reverse-card-front, .reverse-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.reverse-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.reverse-card-back {
+  background-color: #EBADFF;
+  color: black;
+  transform: rotateY(180deg);
+  width:100%;
+  height: 450px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.img_character{
+  width: 300px;
+  height: 450px;
+}
+
+.top-card{
+  display: block;
+  background-color: orange;
+  height: 20%;
+  margin: 10px;
+  border: 1px solid black;
+  padding-top: 3%;
+  color: black;
+  font-size: 20px;
+}
+
+.top-card > .band_name{
+  font-size: 16px;
+  margin-bottom: 5%;
+}
+
+.card-text{
+  font-size: 16px;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Arial;
+}
+
+.band_role{
+  font-size: 21px;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 10px) and (max-width: 450px) {
+
+  .grid_characters{
+    grid-template-columns: 1fr;
+    padding: 19px;
+  }
+
+  .img_character{
+    width: 200px;
+    height: 300px;
+  }
+
+  .card-text{
+    font-size: 70%;
+  }
+
+  .reverse-card{
+    height: 300px;
+  }
+
+  .reverse-card-back{
+    height: 300px;
+  }
+
+  .band_role{
+    font-size: 95%;
+  }
+
+  .searchbar{
+    width: 80vw;
+  }
+
+  .reverse-card-back{
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+
+@media only screen and (min-width: 450px) and (max-width: 650px) {
+
+  .grid_characters{
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .img_character{
+    width: 200px;
+    height: 300px;
+  }
+
+  .searchbar{
+    width: 80vw;
+  }
+  .reverse-card-back{
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+
+  .grid_characters{
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 25px;
+  }
+  .searchbar{
+    width: 80vw;
+  }
+  .reverse-card-back{
+    margin-left: 0;
+  }
+}

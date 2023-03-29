@@ -1,7 +1,7 @@
 window.onload = () => {
 
     const searchbar = document.getElementById("searchbar");
-
+    //const island_nation = document.getElementsByClassName("island")
     const cardslist = document.getElementsByClassName("top-card");
     const band_role = document.getElementsByClassName("band_role");
     const card_header = document.getElementsByClassName("reverse-card");
@@ -18,19 +18,21 @@ window.onload = () => {
     });
 
 
-    searchbar.onkeyup = (event) => {
-      let filter = event.target.value.toUpperCase();
-      for (let i = 0; i < cardslist.length; i++){
-        let innerHTML = cardslist[i].innerHTML.toUpperCase();
-        let innerHTML2 = band_role[i].innerHTML.toUpperCase();
-        if (innerHTML.indexOf(filter) !== -1 || innerHTML2.indexOf(filter) !== -1){
-          card_header[i].style.display = "";
-        }
-        else{
-          card_header[i].style.display = "none";
+    try {
+      searchbar.onkeyup = (event) => {
+        let filter = event.target.value.toUpperCase();
+        for (let i = 0; i < cardslist.length; i++){
+          let innerHTML = cardslist[i].innerHTML.toUpperCase();
+          let innerHTML2 = band_role[i].innerHTML.toUpperCase();
+          if (innerHTML.indexOf(filter) !== -1 || innerHTML2.indexOf(filter) !== -1){
+            card_header[i].style.display = "";
+          }
+          else{
+            card_header[i].style.display = "none";
+          }
         }
       }
-    }
+    } catch (e) {}
   }
 
 function newSrc() {
@@ -42,4 +44,13 @@ function newSrc() {
 function addToCart() {
     document.getElementById("shopping_cart").style.bottom = "20px";
     document.getElementById("cart_counter").innerHTML++;
+}
+
+function alertForm(){
+  if(document.querySelector("[data-country]") == "island") {
+       alert("Sorry, we don't ship to small islands")
+}
+  else {
+    alert("Item is processed, please wait for the confirmation email (Not yet implemented)")
+  }
 }

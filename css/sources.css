@@ -1,0 +1,70 @@
+@import "master.css";
+
+.sources{
+  display: flex;
+  height: fit-content;
+  width: 50vw;
+  box-shadow: 0px 0px 10px 10px #c7c7c7;
+  background-color: white;
+  border-radius: 50px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 69px;
+  padding: 30px;
+}
+
+.sources_text{
+  margin-top: 20px;
+}
+
+.link_sources{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.h1_links{
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+.link_p{
+  color: #551A8B;
+  font-weight: bold;
+}
+
+.h1_links_top{
+  margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 10px) and (max-width: 450px){
+
+  .sources{
+    width: 95vw;
+  }
+  .link_sources{
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 650px){
+  .sources{
+    width: 86vw;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1000px){
+
+  .sources{
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1350px){
+
+  .Sources{
+    width: 70vw;
+  }
+}
