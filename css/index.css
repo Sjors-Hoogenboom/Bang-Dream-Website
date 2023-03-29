@@ -83,18 +83,23 @@ iframe{
   margin-top: 6%;
 }
 
+.container{ 
+  width: 80vw;
+  height: 100%;
+  margin: auto;
+  padding-top: 10%;
+}
 
 .section_game{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 80vw;
-  margin: 0;
-
-  margin-top: 5%;
   background-color: rgb(240, 195, 255);
   border: solid 1px;
   border-color: black;
-  border-radius: 2%;
+  border-radius: 20px;
+  padding-bottom: 50px;
+  grid-row-gap: 30px;
+  margin-bottom: 15%;
 }
 
 .dotted_pattern{
@@ -106,6 +111,7 @@ iframe{
   width: 50%;
   z-index: 0;
   border-radius: inherit;
+  user-select: none;
 }
 
 .roselia_logo{
@@ -124,9 +130,10 @@ iframe{
   justify-content: center;
   margin: auto;
   font-weight: bold;
+  font-size: 20px;
 }
 
-.test{
+.header_game{
   display: flex;
   justify-content: flex-start;
   background-size: cover;
@@ -139,7 +146,7 @@ iframe{
   text-align: center;
 }
 
-.test > p {
+.header_game > .h1_content {
   position: absolute;
   align-items: center;
   text-align: center;
@@ -191,14 +198,21 @@ iframe{
   }
 
   .section_game{
-    width: 100%;
-    margin-left: 0%;
     grid-template-columns: 1fr;
+    border-radius: 20px;
   }
   .content_game{
-    width: 95%;
+    width: 90%;
     margin-top: 10%;
+    padding-top: 0px;
     font-size: 80%;
+  }
+  .header_game{
+    width: 85vw;
+  }
+  .container{
+    width: 95vw;
+    margin: 0px 10px 0px 10px;
   }
 }
 
@@ -214,13 +228,21 @@ iframe{
   }
 
   .section_game{
-    width: 100%;
+    width: 90vw;
     margin-left: 0%;
     grid-template-columns: 1fr;
   }
   .content_game{
     width: 90%;
-    margin-top: 20%;
+    margin-top: 15%;
+    padding-top: 0px;
+    font-size: 80%;
+  }
+  .header_game{
+    width: 81vw;
+  }
+  .container{
+    width: 90vw;
   }
 }
 
@@ -242,5 +264,8 @@ iframe{
   .content_game{
     width: 80%;
     margin-top: 8%;
+  }
+  .header_game{
+    width: 64vw;
   }
 }
