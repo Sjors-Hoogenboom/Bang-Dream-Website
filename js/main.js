@@ -54,3 +54,25 @@ function alertForm(){
     alert("Item is processed, please wait for the confirmation email (Not yet implemented)")
   }
 }
+
+function changeFavicon() {
+  const favicons = [
+    "favicon_AFG.ico",
+    "favicon_HEL.ico",
+    "favicon_MOF.ico",
+    "favicon_PAP.ico",
+    "favicon_POPI.ico",
+    "favicon_RAS.ico",
+    "favicon_ROS.ico",
+  ];
+  
+  const randomFaviconIndex = Math.floor(Math.random() * favicons.length);
+  const faviconUrl = "/img/assets/favicon/" + favicons[randomFaviconIndex];
+  
+  const favicon = document.querySelector('link[rel="icon"]');
+  favicon.href = faviconUrl;
+  
+  setTimeout(changeFavicon, 3000);
+}
+
+changeFavicon();
