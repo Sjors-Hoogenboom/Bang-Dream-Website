@@ -286,13 +286,16 @@ const characters = [
 
   const container = document.querySelector('main.container');
 
+  let counter = 1;
+
   characters.forEach((item) => {
+
     const header = document.createElement("header");
     header.classList.add("reverse-card");
   
     const section = document.createElement("section");
     section.classList.add("reverse-card-inner");
-    section.setAttribute("id", "play_34");
+    section.setAttribute("id", "play_" + counter);
   
     const front = document.createElement("article");
     front.classList.add("reverse-card-front");
@@ -301,19 +304,33 @@ const characters = [
     img.classList.add("img_character");
     img.src = item.img;
 
+    const audio = document.createElement("audio");
+
+    const audio_source = document.createElement("source");
+    audio_source.src = item.voice;
+
+    audio.appendChild(audio_source);
+
     front.appendChild(img);
   
     const back = document.createElement("article");
     back.classList.add("reverse-card-back");
   
+
+    const characterBio = document.createElement("article");
+    characterBio.classList.add("card-text");
+
     const bandRole = document.createElement("h3");
     bandRole.classList.add("band_role");
     bandRole.textContent = item.role;
-  
-    const characterBio = document.createElement("div");
-    characterBio.classList.add("character_bio");
-    characterBio.innerHTML = "<p>" + item.bio + "</p>";
-  
+
+    const character_description = document.createElement("p");
+    character_description.innerHTML = item.bio;
+
+    characterBio.appendChild(bandRole);
+    characterBio.appendChild(character_description);
+
+
     const topCard = document.createElement("section");
     topCard.classList.add("top-card");
 
@@ -330,15 +347,16 @@ const characters = [
     topCard.appendChild(band);
     topCard.appendChild(name);
     
-    back.appendChild(bandRole);
     back.appendChild(characterBio);
   
     section.appendChild(front);
+    section.appendChild(audio);
     section.appendChild(back);
   
     header.appendChild(section);
   
     container.appendChild(header);
-  });
 
+    counter++;
+  });
 });
