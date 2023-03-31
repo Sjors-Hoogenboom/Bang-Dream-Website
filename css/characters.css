@@ -57,7 +57,7 @@
   transform: rotateY(180deg);
 }
 
-.grid_characters{
+.container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 80vw;
@@ -141,7 +141,7 @@
 
 @media only screen and (min-width: 10px) and (max-width: 450px) {
 
-  .grid_characters{
+  .container{
     grid-template-columns: 1fr;
     padding: 19px;
   }
@@ -181,7 +181,7 @@
 
 @media only screen and (min-width: 450px) and (max-width: 650px) {
 
-  .grid_characters{
+  .container{
     grid-template-columns: 1fr;
     padding: 20px;
   }
@@ -202,7 +202,7 @@
 
 @media only screen and (min-width: 650px) and (max-width: 1000px) {
 
-  .grid_characters{
+  .container{
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 30px;
     grid-column-gap: 25px;
