@@ -1,7 +1,6 @@
 window.onload = () => {
 
     const searchbar = document.getElementById("searchbar");
-    //const island_nation = document.getElementsByClassName("island")
     const cardslist = document.getElementsByClassName("top-card");
     const band_role = document.getElementsByClassName("band_role");
     const card_header = document.getElementsByClassName("reverse-card");
@@ -44,15 +43,6 @@ function newSrc() {
 function addToCart() {
     document.getElementById("shopping_cart").style.bottom = "20px";
     document.getElementById("cart_counter").innerHTML++;
-}
-
-function alertForm(){
-  if(document.querySelector("[data-country]") == "island") {
-       alert("Sorry, we don't ship to small islands")
-}
-  else {
-    alert("Item is processed, please wait for the confirmation email (Not yet implemented)")
-  }
 }
 
 function changeFavicon() {
