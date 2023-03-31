@@ -8,13 +8,9 @@ Changes in the code may not be visible on the website itself, because I delay pu
 
 Features currently in the working:
 
--Webshop item tracker/ order form
--Fix the console bug in every page that doesn't contain a searchbar
+-Webshop item tracker/ order form, needs improvement, but is now present
 
 Features that will be worked on in the near future:
 
 -Song page
 -Information page about all the webshop items
--Fix the footer
--Fix the file structure (a css file for every page)
--Fix the font on mobile
