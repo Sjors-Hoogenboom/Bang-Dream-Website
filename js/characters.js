@@ -285,78 +285,69 @@ const characters = [
 
 
   const container = document.querySelector('main.container');
+    let counter = 1;
 
-  let counter = 1;
+characters.forEach(item => {
+  const header = document.createElement('header');
+  header.classList.add('reverse-card');
 
-  characters.forEach((item) => {
+  const section = document.createElement('section');
+  section.classList.add('reverse-card-inner');
+  section.setAttribute('id', 'play_${counter}');
 
-    const header = document.createElement("header");
-    header.classList.add("reverse-card");
-  
-    const section = document.createElement("section");
-    section.classList.add("reverse-card-inner");
-    section.setAttribute("id", "play_" + counter);
-  
-    const front = document.createElement("article");
-    front.classList.add("reverse-card-front");
-  
-    const img = document.createElement("img");
-    img.classList.add("img_character");
-    img.src = item.img;
+  const front = document.createElement('article');
+  front.classList.add('reverse-card-front');
 
-    const audio = document.createElement("audio");
+  const img = document.createElement('img');
+  img.classList.add('img_character');
+  img.src = item.img;
 
-    const audio_source = document.createElement("source");
-    audio_source.src = item.voice;
+  const audio = document.createElement('audio');
+  const audioSource = document.createElement('source');
+  audioSource.src = item.voice;
+  audio.appendChild(audioSource);
 
-    audio.appendChild(audio_source);
+  front.appendChild(img);
 
-    front.appendChild(img);
-  
-    const back = document.createElement("article");
-    back.classList.add("reverse-card-back");
-  
+  const back = document.createElement('article');
+  back.classList.add('reverse-card-back');
 
-    const characterBio = document.createElement("article");
-    characterBio.classList.add("card-text");
+  const characterBio = document.createElement('article');
+  characterBio.classList.add('card-text');
 
-    const bandRole = document.createElement("h3");
-    bandRole.classList.add("band_role");
-    bandRole.textContent = item.role;
+  const bandRole = document.createElement('h3');
+  bandRole.classList.add('band_role');
+  bandRole.textContent = item.role;
 
-    const character_description = document.createElement("p");
-    character_description.innerHTML = item.bio;
+  const characterDescription = document.createElement('p');
+  characterDescription.innerHTML = item.bio;
 
-    characterBio.appendChild(bandRole);
-    characterBio.appendChild(character_description);
+  characterBio.appendChild(bandRole);
+  characterBio.appendChild(characterDescription);
 
+  const topCard = document.createElement('section');
+  topCard.classList.add('top-card');
+  back.appendChild(topCard);
 
-    const topCard = document.createElement("section");
-    topCard.classList.add("top-card");
+  const band = document.createElement('h2');
+  band.classList.add('band_name');
+  band.innerHTML = item.band;
 
-    back.appendChild(topCard);
+  const name = document.createElement('h1');
+  name.classList.add('character_name');
+  name.innerHTML = item.name;
 
-    const band = document.createElement("h2");
-    band.classList.add("band_name");
-    band.innerHTML = item.band;
-  
-    const name = document.createElement("h1");
-    name.classList.add("character_name");
-    name.innerHTML = item.name;
+  topCard.appendChild(band);
+  topCard.appendChild(name);
+  back.appendChild(characterBio);
 
-    topCard.appendChild(band);
-    topCard.appendChild(name);
-    
-    back.appendChild(characterBio);
-  
-    section.appendChild(front);
-    section.appendChild(audio);
-    section.appendChild(back);
-  
-    header.appendChild(section);
-  
-    container.appendChild(header);
+  section.appendChild(front);
+  section.appendChild(audio);
+  section.appendChild(back);
 
-    counter++;
-  });
+  header.appendChild(section);
+  container.appendChild(header);
+
+  counter++;
+});
 });
