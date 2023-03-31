@@ -1,7 +1,6 @@
 window.onload = () => {
 
     const searchbar = document.getElementById("searchbar");
-    //const island_nation = document.getElementsByClassName("island")
     const cardslist = document.getElementsByClassName("top-card");
     const band_role = document.getElementsByClassName("band_role");
     const card_header = document.getElementsByClassName("reverse-card");
@@ -46,11 +45,38 @@ function addToCart() {
     document.getElementById("cart_counter").innerHTML++;
 }
 
-function alertForm(){
-  if(document.querySelector("[data-country]") == "island") {
-       alert("Sorry, we don't ship to small islands")
+function changeFavicon() {
+
+  const favicons = [
+    "favicon_AFG.ico",
+    "favicon_HEL.ico",
+    "favicon_MOF.ico",
+    "favicon_PAP.ico",
+    "favicon_POPI.ico",
+    "favicon_RAS.ico",
+    "favicon_ROS.ico",
+  ];
+
+  let lastFavicon = Math.floor(Math.random() * favicons.length);
+
+  const getRandomFavicon = () => {
+    let randomFavicon;
+    
+    do {
+      randomFavicon = Math.floor(Math.random() * favicons.length);
+    } while (randomFavicon === lastFavicon)
+    lastFavicon = randomFavicon;
+    return randomFavicon;
+  };
+
+  const getRandomFaviconIndex = getRandomFavicon()
+  const faviconUrl = "/img/assets/favicon/" + favicons[getRandomFaviconIndex];
+  const favicon = document.querySelector('link[rel="icon"]');
+
+  favicon.href = faviconUrl;
+  
+  setTimeout(changeFavicon, 3000);
+  
 }
-  else {
-    alert("Item is processed, please wait for the confirmation email (Not yet implemented)")
-  }
-}
+
+changeFavicon();

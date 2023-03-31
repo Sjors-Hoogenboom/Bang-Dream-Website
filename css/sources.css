@@ -11,6 +11,7 @@
   margin: auto;
   margin-top: 69px;
   padding: 30px;
+  margin-bottom: 50px;
 }
 
 .sources_text{
@@ -42,7 +43,7 @@
 @media only screen and (min-width: 10px) and (max-width: 450px){
 
   .sources{
-    width: 95vw;
+    width: 70vw;
   }
   .link_sources{
     font-size: 80%;
@@ -51,7 +52,7 @@
 
 @media only screen and (min-width: 450px) and (max-width: 650px){
   .sources{
-    width: 86vw;
+    width: 75vw;
   }
 }
 
