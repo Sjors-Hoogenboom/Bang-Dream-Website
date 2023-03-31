@@ -25,17 +25,19 @@
             <input class="form_boxes" type="text" name="phone number" placeholder="Phone number">
 
             <h1 class="form_title">Shipping information</h1>
-
+            
             <select class="form_boxes" id='country' name="Select country">
               <option>select country</option>
             </select>
-            
               <input class="form_boxes" type="text" name="city" placeholder="City">
               <input class="form_boxes" type="text" name="postal code" placeholder="Postal code">
               <input class="form_boxes" type="text" name="street" placeholder="Street address">
             <section class="section_button_form">
               <button onclick="alertForm()" class="button_form" type="button" name="order_button">order</button>
-              <a href="Webshop.html"><button class="button_form" type="button" name="go_back_button">go back</button></a>
+              <!-- Validator zegt hier een error, button en a tag omdraaien werkt niet en een onClick of a tag die lijkt op een knop maken is -->
+              <a href="Webshop.html">
+                <button class="button_form" type="button" name="go_back_button">go back</button>
+              </a>
             </section>
           </section>
         </form>
