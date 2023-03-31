@@ -56,6 +56,7 @@ function alertForm(){
 }
 
 function changeFavicon() {
+
   const favicons = [
     "favicon_AFG.ico",
     "favicon_HEL.ico",
@@ -65,14 +66,27 @@ function changeFavicon() {
     "favicon_RAS.ico",
     "favicon_ROS.ico",
   ];
-  
-  const randomFaviconIndex = Math.floor(Math.random() * favicons.length);
-  const faviconUrl = "/img/assets/favicon/" + favicons[randomFaviconIndex];
-  
+
+  let lastFavicon = Math.floor(Math.random() * favicons.length);
+
+  const getRandomFavicon = () => {
+    let randomFavicon;
+    
+    do {
+      randomFavicon = Math.floor(Math.random() * favicons.length);
+    } while (randomFavicon === lastFavicon)
+    lastFavicon = randomFavicon;
+    return randomFavicon;
+  };
+
+  const getRandomFaviconIndex = getRandomFavicon()
+  const faviconUrl = "/img/assets/favicon/" + favicons[getRandomFaviconIndex];
   const favicon = document.querySelector('link[rel="icon"]');
+
   favicon.href = faviconUrl;
   
   setTimeout(changeFavicon, 3000);
+  
 }
 
 changeFavicon();
