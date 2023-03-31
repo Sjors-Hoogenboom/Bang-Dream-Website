@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const characters = [
 {
     name: "Kasumi Toyama",
-    band: "Poppin'Party",
+    band: "Poppin' Party",
     role: "guitarist, vocalist and leader",
     bio: "As guitarist and vocalist for Poppin'Party, she brims with energy and positivity. Because she is highly intuitive, she constantly finds sparkling and heart-pounding inspirations to make into songs. She is not afraid to communicate and is always surrounded by friends.",
     img: "/img/characters/Kasumi_Toyama.png",
@@ -11,7 +11,7 @@ const characters = [
 },
 {
     name: "Rimi Ushigome",
-    band: "Poppin'Party",
+    band: "Poppin' Party",
     role: "bassist",
     bio: "She's shy, but her particularity when it comes to music and her love for Yamabuki Bakery's chocolate cornets are unmatched. She lived in Kansai until partway through middle school, and her accent sometimes slips out when she is excited or flustered.",
     img: "/img/characters/Rimi_Ushigome.png",
@@ -19,7 +19,7 @@ const characters = [
 },
 {
     name: "Saya Yamabuki",
-    band: "Poppin'Party",
+    band: "Poppin' Party",
     role: "drummer",
     bio: "On top of her high-school studies, she also helps out at her family business, Yamabuki Bakery, located downtown. Her calm personality serves as an emotional pillar for Poppin'Party. She still gets along with the members of her previous band.",
     img: "/img/characters/Saya_Yamabuki.png",
@@ -27,7 +27,7 @@ const characters = [
 },
 {
     name: "Arisa Ichigaya",
-    band: "Poppin'Party",
+    band: "Poppin' Party",
     role: "keyboardist",
     bio: "Arisa's grandmother runs the pawn shop Ryuseido. She was an indoor girl until she joined the band and started making friends. Now she is part of the student council at Hanasakigawa. Her tongue is still sharp when talking to Kasumi, but sometimes, she shows her true feelings.",
     img: "/img/characters/Arisa_Ichigaya.png",
